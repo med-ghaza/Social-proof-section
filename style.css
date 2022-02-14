@@ -1,0 +1,239 @@
+/* Start Variables */
+
+:root {
+  /* Primary */
+
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+}
+
+body::before {
+  content: "";
+  background-image: url(images/bg-pattern-top-mobile.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -2;
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: "";
+    background-image: url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -2;
+  }
+}
+
+body::after {
+  content: "";
+  background-image: url(images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -2;
+}
+
+@media (min-width: 768px) {
+  body::after {
+    content: "";
+    background-image: url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Proof Section */
+
+main {
+  margin: 80px 25px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  main {
+    margin: 100px;
+  }
+}
+
+main .content {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  main .content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+main .content .text {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  main .content .text {
+    flex-basis: 45%;
+    text-align: left;
+  }
+}
+
+main .content .text h1 {
+  margin-bottom: 15px;
+  color: var(--Very-Dark-Magenta);
+}
+
+@media (min-width: 992px) {
+  main .content .text h1 {
+    font-size: 50px;
+  }
+}
+
+main .content .text p {
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--Dark-Grayish-Magenta);
+}
+
+@media (min-width: 992px) {
+  main .content .text p {
+    font-weight: 500;
+  }
+}
+
+main .content .stars .box {
+  padding: 20px;
+  margin-bottom: 15px;
+  background: var(--Light-Grayish-Magenta);
+  border-radius: 8px;
+}
+
+@media (min-width: 992px) {
+  main .content .stars .box {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  main .content .stars .box:first-child {
+    transform: translateX(-80px);
+  }
+
+  main .content .stars .box:nth-child(2) {
+    transform: translateX(-40px);
+  }
+}
+
+main .content .stars .box .star {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  main .content .stars .box .star {
+    margin-bottom: 0;
+  }
+}
+
+main .content .stars .box .star img {
+  margin-right: 5px;
+}
+
+main .content .stars .box .rate {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media (min-width: 992px) {
+  main .content .stars .box .rate {
+    margin-left: 25px;
+  }
+}
+
+main .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 30px;
+}
+
+main .team .box {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+  border-radius: 8px;
+  padding: 35px;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  main .team .box:nth-child(2) {
+      transform: translateY(20px);
+  }
+
+  main .team .box:last-child {
+    transform: translateY(40px);
+  }
+}
+
+main .team .box .contain {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+main .team .box .contain img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+main .team .box .contain h2 {
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+main .team .box .contain h2 span {
+  display: block;
+  color: var(--Dark-Grayish-Magenta);
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+main .team .box p {
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--Light-Grayish-Magenta);
+}
+
+/* End Proof Section */
